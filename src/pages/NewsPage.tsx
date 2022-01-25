@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import NewsItem, { NewsI } from '../components/NewsItem/NewsItem';
 import UseMessages from '../hooks/UseMessages';
 import axios from '../utils/api';
@@ -8,7 +8,7 @@ import moment from 'moment';
 import { useStore } from 'react-redux';
 import { createSetLastUpdateTimestampAction } from '../.store/actionCreators/lastUpdateTimestampActionCreator';
 
-const NewsPage: React.FunctionComponent<{}> = (props) => {
+const NewsPage: React.FunctionComponent<{}> = () => {
   const store = useStore();
   const [news, setNews] = useState(Array<NewsI>());
   const message = UseMessages();
